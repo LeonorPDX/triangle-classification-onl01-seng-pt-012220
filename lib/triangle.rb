@@ -19,6 +19,9 @@ class Triangle
         error.message
       end
     elsif
+    elsif
+    else
+    end
       
   end
   
