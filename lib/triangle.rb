@@ -7,7 +7,9 @@ class Triangle
     @s1 = side1
     @s2 = side2
     @s3 = side3
-    @sides << @s1, @s2, @s3
+    @sides << @s1
+    @sides << @s2
+    @sides << @s3
   end
   
   def kind
