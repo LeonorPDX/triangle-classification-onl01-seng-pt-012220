@@ -1,15 +1,14 @@
 class Triangle
-  attr_accessor :s1, :s2, :s3, :sides
+  attr_accessor :sides
+  
+  @sides = []
   
   def initialize (side1, side2, side3)
-    @s1 = side1
-    @s2 = side2
-    @s3 = side3
-    @sides = [@s1, @s2, @s3]
+    @sides = [side1, side2, side3]
+    @sides.sort!
   end
   
   def kind
-    @sides.sort!
     if @sides.any?{|side| side <= 0} || (@sides[2] <= (@sides[0] + @sides[1]))
       raise TriangleError
     elsif @sides.uniq.length == 1
