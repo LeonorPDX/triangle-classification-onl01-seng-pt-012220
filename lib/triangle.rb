@@ -18,10 +18,9 @@ class Triangle
         rescue TriangleError => error 
         error.message
       end
-    elsif @sides.uniq
-      
+    elsif @sides.uniq.length == 1
       :equilateral
-    elsif
+    elsif @sides.uniq.length == 2
       :isosceles
     else
       :scalene
