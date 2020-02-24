@@ -13,7 +13,7 @@ class Triangle
     if @sides.each {|side| side <= 0} || (@sides[2] <= (@sides[0] + @sides[1]))
         raise TriangleError
     else
-      if @sides.uniq.length == 1
+      if (@s1 == @s2) && (@s1 == @s3)
       :equilateral
       elsif @sides.uniq.length == 2
       :isosceles
