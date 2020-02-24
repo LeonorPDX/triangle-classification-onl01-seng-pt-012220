@@ -12,12 +12,14 @@ class Triangle
     @sides.sort!
     if @sides.each {|side| side <= 0} || (@sides[2] <= (@sides[0] + @sides[1]))
         raise TriangleError
-    else @sides.uniq.length == 1
-      :equilateral
-    elsif @sides.uniq.length == 2
-      :isosceles
     else
+      if @sides.uniq.length == 1
+      :equilateral
+      elsif @sides.uniq.length == 2
+      :isosceles
+      else
       :scalene
+      end
     end
   end
   
