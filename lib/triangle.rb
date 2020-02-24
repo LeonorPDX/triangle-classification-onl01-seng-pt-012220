@@ -10,7 +10,7 @@ class Triangle
   
   def kind
     @sides.sort!
-    if @sides.each {|side| side <= 0} || @sides[2] <= (@sides[0] + @sides[1])
+    if @sides.each {|side| side <= 0} || (@sides[2] <= (@sides[0] + @sides[1]))
         raise TriangleError
     elsif @sides.uniq.length == 1
       :equilateral
