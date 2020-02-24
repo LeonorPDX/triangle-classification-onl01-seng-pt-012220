@@ -9,7 +9,7 @@ class Triangle
   end
   
   def kind
-    if @sides.any?{|side| side <= 0} || (@sides[2] >= (@sides[0] + @sides[1]))
+    if @sides.any?{|side| side <= 0} || ((@sides[0] + @sides[1]) <=)
       raise TriangleError
     elsif @sides.uniq.length == 1
       :equilateral
