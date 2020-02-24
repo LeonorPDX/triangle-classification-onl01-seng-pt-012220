@@ -11,7 +11,10 @@ class Triangle
   end
   
   def kind
-    if @sides.each {|side| side !> 0
+    @sides.sort!
+    if @sides.each {|side| side !> 0} || @sides[2] <= (@sides[0] + @sides[1])
+      begin
+        raise TriangleError
   end
   
   class TriangleError < StandardError
