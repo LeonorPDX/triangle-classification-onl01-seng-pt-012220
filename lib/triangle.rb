@@ -6,10 +6,10 @@ class Triangle
     @s2 = side2
     @s3 = side3
     @sides = [@s1, @s2, @s3]
-    @sides.sort!
   end
   
   def kind
+    @sides.sort!
     if @sides.any? {|side| side <= 0}
       raise TriangleError
     elsif @sides[2] <= (@sides[0] + @sides[1])
