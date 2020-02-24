@@ -15,6 +15,9 @@ class Triangle
     if @sides.each {|side| side !> 0} || @sides[2] <= (@sides[0] + @sides[1])
       begin
         raise TriangleError
+        rescue TriangleError => error 
+        error.message
+      end
   end
   
   class TriangleError < StandardError
