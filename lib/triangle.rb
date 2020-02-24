@@ -11,15 +11,13 @@ class Triangle
   def kind
     @sides.sort!
     if @sides.each {|side| side <= 0} || @sides[2] <= (@sides[0] + @sides[1])
-        raise TriangleError
-    else
-      if @sides.uniq.length == 1
+      raise TriangleError
+    elsif @sides.uniq.length == 1
       :equilateral
-      elsif @sides.uniq.length == 2
+    elsif @sides.uniq.length == 2
       :isosceles
-      else
+    else
       :scalene
-      end
     end
   end
   
