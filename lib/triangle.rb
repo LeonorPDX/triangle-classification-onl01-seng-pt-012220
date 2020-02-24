@@ -19,8 +19,11 @@ class Triangle
         error.message
       end
     elsif
+      :equilateral
     elsif
+      :isosceles
     else
+      :scalene
     end
       
   end
