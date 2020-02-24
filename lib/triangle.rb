@@ -18,7 +18,8 @@ class Triangle
         rescue TriangleError => error 
         error.message
       end
-    elsif
+    elsif @sides.uniq
+      
       :equilateral
     elsif
       :isosceles
